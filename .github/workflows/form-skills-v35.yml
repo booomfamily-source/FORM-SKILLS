@@ -1,0 +1,17 @@
+name: FORM SKILLS v3.5 candidate regression
+on:
+  pull_request:
+    paths:
+      - 'versions/v3.5/**'
+      - '.github/workflows/form-skills-v35.yml'
+  workflow_dispatch:
+jobs:
+  regression:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python3 versions/v3.5/regression_test.py
+      - run: python3 versions/v3.5/verify_package.py

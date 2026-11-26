@@ -1,0 +1,3017 @@
+{
+  "checker_version": "v3.4",
+  "inherited_regression_exit": null,
+  "added_cases": 29,
+  "matched": 6,
+  "results": [
+    {
+      "case": "known_continuity_failure",
+      "expected": "REJECTED",
+      "actual": "CHECKS_PASS",
+      "matches": false,
+      "input": {
+        "version": "v3.3-candidate",
+        "subject": "original automotive concept",
+        "dimensions": {
+          "length_mm": 4750,
+          "width_mm": 2020,
+          "height_mm": 1150
+        },
+        "axes": {
+          "x": "length rear to front",
+          "y": "width left to right",
+          "z": "height above ground"
+        },
+        "dimension_provenance": "Assumed from previous text, not measured",
+        "events": [
+          {
+            "id": "V01",
+            "type": "visual",
+            "before": true,
+            "after": true,
+            "description": "Main shoulder"
+          },
+          {
+            "id": "V02",
+            "type": "visual",
+            "before": true,
+            "after": false,
+            "description": "Secondary side crease"
+          }
+        ],
+        "claims": {},
+        "views": {
+          "profile": "PASS",
+          "front": "PASS",
+          "rear": "PASS",
+          "three_quarter": "PASS",
+          "detail": "PASS"
+        },
+        "continuity": {
+          "claim": "G2",
+          "status": "FAIL",
+          "evidence": "",
+          "check": {
+            "tool": "section_check",
+            "spec": "form04-edge.json"
+          }
+        },
+        "validation": "Only manifest syntax and accounting can be checked. No source CAD.",
+        "constraints": [
+          "synthetic test"
+        ],
+        "joints": [
+          {
+            "name": "j",
+            "nominal_mm": 0.15,
+            "tolerance_mm": 0.03
+          }
+        ],
+        "view_sources": {
+          "profile": "form04.svg",
+          "front": "form04.svg",
+          "rear": "form04.svg",
+          "three_quarter": "form04.svg",
+          "detail": "form04.svg"
+        }
+      }
+    },
+    {
+      "case": "known_view_failure",
+      "expected": "REJECTED",
+      "actual": "PROJECT_INCOMPLETE",
+      "matches": false,
+      "input": {
+        "version": "v3.3-candidate",
+        "subject": "original automotive concept",
+        "dimensions": {
+          "length_mm": 4750,
+          "width_mm": 2020,
+          "height_mm": 1150
+        },
+        "axes": {
+          "x": "length rear to front",
+          "y": "width left to right",
+          "z": "height above ground"
+        },
+        "dimension_provenance": "Assumed from previous text, not measured",
+        "events": [
+          {
+            "id": "V01",
+            "type": "visual",
+            "before": true,
+            "after": true,
+            "description": "Main shoulder"
+          },
+          {
+            "id": "V02",
+            "type": "visual",
+            "before": true,
+            "after": false,
+            "description": "Secondary side crease"
+          }
+        ],
+        "claims": {},
+        "views": {
+          "profile": "PASS",
+          "front": "FAIL",
+          "rear": "PASS",
+          "three_quarter": "PASS",
+          "detail": "PASS"
+        },
+        "continuity": {
+          "claim": "G2",
+          "status": "PASS",
+          "evidence": "",
+          "check": {
+            "tool": "section_check",
+            "spec": "form04-edge.json"
+          }
+        },
+        "validation": "Only manifest syntax and accounting can be checked. No source CAD.",
+        "constraints": [
+          "synthetic test"
+        ],
+        "joints": [
+          {
+            "name": "j",
+            "nominal_mm": 0.15,
+            "tolerance_mm": 0.03
+          }
+        ],
+        "view_sources": {
+          "profile": "form04.svg",
+          "front": "form04.svg",
+          "rear": "form04.svg",
+          "three_quarter": "form04.svg",
+          "detail": "form04.svg"
+        }
+      }
+    },
+    {
+      "case": "unknown_still_incomplete",
+      "expected": "PROJECT_INCOMPLETE",
+      "actual": "PROJECT_INCOMPLETE",
+      "matches": true,
+      "input": {
+        "version": "v3.3-candidate",
+        "subject": "original automotive concept",
+        "dimensions": {
+          "length_mm": 4750,
+          "width_mm": 2020,
+          "height_mm": 1150
+        },
+        "axes": {
+          "x": "length rear to front",
+          "y": "width left to right",
+          "z": "height above ground"
+        },
+        "dimension_provenance": "Assumed from previous text, not measured",
+        "events": [
+          {
+            "id": "V01",
+            "type": "visual",
+            "before": true,
+            "after": true,
+            "description": "Main shoulder"
+          },
+          {
+            "id": "V02",
+            "type": "visual",
+            "before": true,
+            "after": false,
+            "description": "Secondary side crease"
+          }
+        ],
+        "claims": {},
+        "views": {
+          "profile": "PASS",
+          "front": "PASS",
+          "rear": "PASS",
+          "three_quarter": "PASS",
+          "detail": "PASS"
+        },
+        "continuity": {
+          "claim": "G2",
+          "status": "UNKNOWN",
+          "evidence": "",
+          "check": {
+            "tool": "section_check",
+            "spec": "form04-edge.json"
+          }
+        },
+        "validation": "Only manifest syntax and accounting can be checked. No source CAD.",
+        "constraints": [
+          "synthetic test"
+        ],
+        "joints": [
+          {
+            "name": "j",
+            "nominal_mm": 0.15,
+            "tolerance_mm": 0.03
+          }
+        ],
+        "view_sources": {
+          "profile": "form04.svg",
+          "front": "form04.svg",
+          "rear": "form04.svg",
+          "three_quarter": "form04.svg",
+          "detail": "form04.svg"
+        }
+      }
+    },
+    {
+      "case": "complete_control",
+      "expected": "CHECKS_PASS",
+      "actual": "CHECKS_PASS",
+      "matches": true,
+      "input": {
+        "version": "v3.3-candidate",
+        "subject": "original automotive concept",
+        "dimensions": {
+          "length_mm": 4750,
+          "width_mm": 2020,
+          "height_mm": 1150
+        },
+        "axes": {
+          "x": "length rear to front",
+          "y": "width left to right",
+          "z": "height above ground"
+        },
+        "dimension_provenance": "Assumed from previous text, not measured",
+        "events": [
+          {
+            "id": "V01",
+            "type": "visual",
+            "before": true,
+            "after": true,
+            "description": "Main shoulder"
+          },
+          {
+            "id": "V02",
+            "type": "visual",
+            "before": true,
+            "after": false,
+            "description": "Secondary side crease"
+          }
+        ],
+        "claims": {},
+        "views": {
+          "profile": "PASS",
+          "front": "PASS",
+          "rear": "PASS",
+          "three_quarter": "PASS",
+          "detail": "PASS"
+        },
+        "continuity": {
+          "claim": "G2",
+          "status": "PASS",
+          "evidence": "",
+          "check": {
+            "tool": "section_check",
+            "spec": "form04-edge.json"
+          }
+        },
+        "validation": "Only manifest syntax and accounting can be checked. No source CAD.",
+        "constraints": [
+          "synthetic test"
+        ],
+        "joints": [
+          {
+            "name": "j",
+            "nominal_mm": 0.15,
+            "tolerance_mm": 0.03
+          }
+        ],
+        "view_sources": {
+          "profile": "form04.svg",
+          "front": "form04.svg",
+          "rear": "form04.svg",
+          "three_quarter": "form04.svg",
+          "detail": "form04.svg"
+        }
+      }
+    },
+    {
+      "case": "root_wrong_type",
+      "expected": "REJECTED",
+      "actual": "CRASH",
+      "error": "AttributeError: 'list' object has no attribute 'get'",
+      "matches": false,
+      "input": []
+    },
+    {
+      "case": "event_wrong_type",
+      "expected": "REJECTED",
+      "actual": "CRASH",
+      "error": "AttributeError: 'int' object has no attribute 'get'",
+      "matches": false,
+      "input": {
+        "version": "v3.3-candidate",
+        "subject": "original automotive concept",
+        "dimensions": {
+          "length_mm": 4750,
+          "width_mm": 2020,
+          "height_mm": 1150
+        },
+        "axes": {
+          "x": "length rear to front",
+          "y": "width left to right",
+          "z": "height above ground"
+        },
+        "dimension_provenance": "Assumed from previous text, not measured",
+        "events": [
+          0
+        ],
+        "claims": {},
+        "views": {
+          "profile": "PASS",
+          "front": "PASS",
+          "rear": "PASS",
+          "three_quarter": "PASS",
+          "detail": "PASS"
+        },
+        "continuity": {
+          "claim": "G2",
+          "status": "PASS",
+          "evidence": "",
+          "check": {
+            "tool": "section_check",
+            "spec": "form04-edge.json"
+          }
+        },
+        "validation": "Only manifest syntax and accounting can be checked. No source CAD.",
+        "constraints": [
+          "synthetic test"
+        ],
+        "joints": [
+          {
+            "name": "j",
+            "nominal_mm": 0.15,
+            "tolerance_mm": 0.03
+          }
+        ],
+        "view_sources": {
+          "profile": "form04.svg",
+          "front": "form04.svg",
+          "rear": "form04.svg",
+          "three_quarter": "form04.svg",
+          "detail": "form04.svg"
+        }
+      }
+    },
+    {
+      "case": "event_id_unhashable",
+      "expected": "REJECTED",
+      "actual": "CRASH",
+      "error": "TypeError: cannot use 'list' as a set element (unhashable type: 'list')",
+      "matches": false,
+      "input": {
+        "version": "v3.3-candidate",
+        "subject": "original automotive concept",
+        "dimensions": {
+          "length_mm": 4750,
+          "width_mm": 2020,
+          "height_mm": 1150
+        },
+        "axes": {
+          "x": "length rear to front",
+          "y": "width left to right",
+          "z": "height above ground"
+        },
+        "dimension_provenance": "Assumed from previous text, not measured",
+        "events": [
+          {
+            "id": [
+              "not",
+              "id"
+            ],
+            "type": "visual",
+            "before": true,
+            "after": true,
+            "description": "Main shoulder"
+          },
+          {
+            "id": "V02",
+            "type": "visual",
+            "before": true,
+            "after": false,
+            "description": "Secondary side crease"
+          }
+        ],
+        "claims": {},
+        "views": {
+          "profile": "PASS",
+          "front": "PASS",
+          "rear": "PASS",
+          "three_quarter": "PASS",
+          "detail": "PASS"
+        },
+        "continuity": {
+          "claim": "G2",
+          "status": "PASS",
+          "evidence": "",
+          "check": {
+            "tool": "section_check",
+            "spec": "form04-edge.json"
+          }
+        },
+        "validation": "Only manifest syntax and accounting can be checked. No source CAD.",
+        "constraints": [
+          "synthetic test"
+        ],
+        "joints": [
+          {
+            "name": "j",
+            "nominal_mm": 0.15,
+            "tolerance_mm": 0.03
+          }
+        ],
+        "view_sources": {
+          "profile": "form04.svg",
+          "front": "form04.svg",
+          "rear": "form04.svg",
+          "three_quarter": "form04.svg",
+          "detail": "form04.svg"
+        }
+      }
+    },
+    {
+      "case": "claims_wrong_type",
+      "expected": "REJECTED",
+      "actual": "CHECKS_PASS",
+      "matches": false,
+      "input": {
+        "version": "v3.3-candidate",
+        "subject": "original automotive concept",
+        "dimensions": {
+          "length_mm": 4750,
+          "width_mm": 2020,
+          "height_mm": 1150
+        },
+        "axes": {
+          "x": "length rear to front",
+          "y": "width left to right",
+          "z": "height above ground"
+        },
+        "dimension_provenance": "Assumed from previous text, not measured",
+        "events": [
+          {
+            "id": "V01",
+            "type": "visual",
+            "before": true,
+            "after": true,
+            "description": "Main shoulder"
+          },
+          {
+            "id": "V02",
+            "type": "visual",
+            "before": true,
+            "after": false,
+            "description": "Secondary side crease"
+          }
+        ],
+        "claims": {
+          "visual": []
+        },
+        "views": {
+          "profile": "PASS",
+          "front": "PASS",
+          "rear": "PASS",
+          "three_quarter": "PASS",
+          "detail": "PASS"
+        },
+        "continuity": {
+          "claim": "G2",
+          "status": "PASS",
+          "evidence": "",
+          "check": {
+            "tool": "section_check",
+            "spec": "form04-edge.json"
+          }
+        },
+        "validation": "Only manifest syntax and accounting can be checked. No source CAD.",
+        "constraints": [
+          "synthetic test"
+        ],
+        "joints": [
+          {
+            "name": "j",
+            "nominal_mm": 0.15,
+            "tolerance_mm": 0.03
+          }
+        ],
+        "view_sources": {
+          "profile": "form04.svg",
+          "front": "form04.svg",
+          "rear": "form04.svg",
+          "three_quarter": "form04.svg",
+          "detail": "form04.svg"
+        }
+      }
+    },
+    {
+      "case": "referenced_json_broken",
+      "expected": "REJECTED",
+      "actual": "CRASH",
+      "error": "JSONDecodeError: Expecting property name enclosed in double quotes: line 1 column 3 (char 2)",
+      "matches": false,
+      "input": {
+        "version": "v3.3-candidate",
+        "subject": "original automotive concept",
+        "dimensions": {
+          "length_mm": 4750,
+          "width_mm": 2020,
+          "height_mm": 1150
+        },
+        "axes": {
+          "x": "length rear to front",
+          "y": "width left to right",
+          "z": "height above ground"
+        },
+        "dimension_provenance": "Assumed from previous text, not measured",
+        "events": [
+          {
+            "id": "V01",
+            "type": "visual",
+            "before": true,
+            "after": true,
+            "description": "Main shoulder"
+          },
+          {
+            "id": "V02",
+            "type": "visual",
+            "before": true,
+            "after": false,
+            "description": "Secondary side crease"
+          }
+        ],
+        "claims": {},
+        "views": {
+          "profile": "PASS",
+          "front": "PASS",
+          "rear": "PASS",
+          "three_quarter": "PASS",
+          "detail": "PASS"
+        },
+        "continuity": {
+          "claim": "G2",
+          "status": "PASS",
+          "evidence": "",
+          "check": {
+            "tool": "section_check",
+            "spec": "broken.json"
+          }
+        },
+        "validation": "Only manifest syntax and accounting can be checked. No source CAD.",
+        "constraints": [
+          "synthetic test"
+        ],
+        "joints": [
+          {
+            "name": "j",
+            "nominal_mm": 0.15,
+            "tolerance_mm": 0.03
+          }
+        ],
+        "view_sources": {
+          "profile": "form04.svg",
+          "front": "form04.svg",
+          "rear": "form04.svg",
+          "three_quarter": "form04.svg",
+          "detail": "form04.svg"
+        }
+      }
+    },
+    {
+      "case": "nonfinite_joint",
+      "expected": "REJECTED",
+      "actual": "REJECTED",
+      "matches": true,
+      "input": {
+        "version": "v3.3-candidate",
+        "subject": "original automotive concept",
+        "dimensions": {
+          "length_mm": 4750,
+          "width_mm": 2020,
+          "height_mm": 1150
+        },
+        "axes": {
+          "x": "length rear to front",
+          "y": "width left to right",
+          "z": "height above ground"
+        },
+        "dimension_provenance": "Assumed from previous text, not measured",
+        "events": [
+          {
+            "id": "V01",
+            "type": "visual",
+            "before": true,
+            "after": true,
+            "description": "Main shoulder"
+          },
+          {
+            "id": "V02",
+            "type": "visual",
+            "before": true,
+            "after": false,
+            "description": "Secondary side crease"
+          }
+        ],
+        "claims": {},
+        "views": {
+          "profile": "PASS",
+          "front": "PASS",
+          "rear": "PASS",
+          "three_quarter": "PASS",
+          "detail": "PASS"
+        },
+        "continuity": {
+          "claim": "G2",
+          "status": "PASS",
+          "evidence": "",
+          "check": {
+            "tool": "section_check",
+            "spec": "form04-edge.json"
+          }
+        },
+        "validation": "Only manifest syntax and accounting can be checked. No source CAD.",
+        "constraints": [
+          "synthetic test"
+        ],
+        "joints": [
+          {
+            "name": "j",
+            "nominal_mm": 0.15,
+            "tolerance_mm": "inf"
+          }
+        ],
+        "view_sources": {
+          "profile": "form04.svg",
+          "front": "form04.svg",
+          "rear": "form04.svg",
+          "three_quarter": "form04.svg",
+          "detail": "form04.svg"
+        }
+      }
+    },
+    {
+      "case": "section_control",
+      "expected": true,
+      "actual": true,
+      "matches": true,
+      "input": {
+        "name": "Form 04, ръб E3",
+        "thickness": 7.15,
+        "stack": [
+          [
+            "вдлъбване",
+            0.1
+          ],
+          [
+            "стъкло",
+            0.7
+          ],
+          [
+            "екран",
+            0.7
+          ],
+          [
+            "плоча",
+            0.4
+          ],
+          [
+            "батерия",
+            3.65
+          ],
+          [
+            "резерв",
+            0.3
+          ],
+          [
+            "намотка",
+            0.5
+          ],
+          [
+            "стъкло гръб",
+            0.7
+          ],
+          [
+            "вдлъбване",
+            0.1
+          ]
+        ],
+        "bezel": {
+          "lip": 0.9,
+          "gap": 0.15,
+          "seat": 0.5,
+          "clear": 0.1,
+          "border": 0.8,
+          "declared": 2.45
+        },
+        "wall": 1.5,
+        "edge": {
+          "nodes": [
+            [
+              0.9,
+              0,
+              0
+            ],
+            [
+              0.8,
+              0,
+              0
+            ],
+            [
+              0,
+              0.8,
+              90
+            ],
+            [
+              0,
+              4.35,
+              90
+            ],
+            [
+              3.6,
+              7.15,
+              180
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "case": "negative_layer_cancelled_by_positive",
+      "expected": false,
+      "actual": true,
+      "matches": false,
+      "input": {
+        "name": "Form 04, ръб E3",
+        "thickness": 7.15,
+        "stack": [
+          [
+            "вдлъбване",
+            0.1
+          ],
+          [
+            "стъкло",
+            0.7
+          ],
+          [
+            "екран",
+            0.7
+          ],
+          [
+            "плоча",
+            0.4
+          ],
+          [
+            "батерия",
+            3.65
+          ],
+          [
+            "резерв",
+            0.3
+          ],
+          [
+            "намотка",
+            0.5
+          ],
+          [
+            "стъкло гръб",
+            0.7
+          ],
+          [
+            "вдлъбване",
+            0.1
+          ],
+          [
+            "negative",
+            -0.5
+          ],
+          [
+            "compensation",
+            0.5
+          ]
+        ],
+        "bezel": {
+          "lip": 0.9,
+          "gap": 0.15,
+          "seat": 0.5,
+          "clear": 0.1,
+          "border": 0.8,
+          "declared": 2.45
+        },
+        "wall": 1.5,
+        "edge": {
+          "nodes": [
+            [
+              0.9,
+              0,
+              0
+            ],
+            [
+              0.8,
+              0,
+              0
+            ],
+            [
+              0,
+              0.8,
+              90
+            ],
+            [
+              0,
+              4.35,
+              90
+            ],
+            [
+              3.6,
+              7.15,
+              180
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "case": "negative_bezel_compensated",
+      "expected": false,
+      "actual": true,
+      "matches": false,
+      "input": {
+        "name": "Form 04, ръб E3",
+        "thickness": 7.15,
+        "stack": [
+          [
+            "вдлъбване",
+            0.1
+          ],
+          [
+            "стъкло",
+            0.7
+          ],
+          [
+            "екран",
+            0.7
+          ],
+          [
+            "плоча",
+            0.4
+          ],
+          [
+            "батерия",
+            3.65
+          ],
+          [
+            "резерв",
+            0.3
+          ],
+          [
+            "намотка",
+            0.5
+          ],
+          [
+            "стъкло гръб",
+            0.7
+          ],
+          [
+            "вдлъбване",
+            0.1
+          ]
+        ],
+        "bezel": {
+          "lip": 1.1,
+          "gap": 0.15,
+          "seat": 0.5,
+          "clear": -0.1,
+          "border": 0.8,
+          "declared": 2.45
+        },
+        "wall": 1.5,
+        "edge": {
+          "nodes": [
+            [
+              0.9,
+              0,
+              0
+            ],
+            [
+              0.8,
+              0,
+              0
+            ],
+            [
+              0,
+              0.8,
+              90
+            ],
+            [
+              0,
+              4.35,
+              90
+            ],
+            [
+              3.6,
+              7.15,
+              180
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "case": "edge_end_disagrees_with_stack",
+      "expected": false,
+      "actual": true,
+      "matches": false,
+      "input": {
+        "name": "Form 04, ръб E3",
+        "thickness": 7.15,
+        "stack": [
+          [
+            "вдлъбване",
+            0.1
+          ],
+          [
+            "стъкло",
+            0.7
+          ],
+          [
+            "екран",
+            0.7
+          ],
+          [
+            "плоча",
+            0.4
+          ],
+          [
+            "батерия",
+            3.65
+          ],
+          [
+            "резерв",
+            0.3
+          ],
+          [
+            "намотка",
+            0.5
+          ],
+          [
+            "стъкло гръб",
+            0.7
+          ],
+          [
+            "вдлъбване",
+            0.1
+          ]
+        ],
+        "bezel": {
+          "lip": 0.9,
+          "gap": 0.15,
+          "seat": 0.5,
+          "clear": 0.1,
+          "border": 0.8,
+          "declared": 2.45
+        },
+        "wall": 1.5,
+        "edge": {
+          "nodes": [
+            [
+              0.9,
+              0,
+              0
+            ],
+            [
+              0.8,
+              0,
+              0
+            ],
+            [
+              0,
+              0.8,
+              90
+            ],
+            [
+              0,
+              4.35,
+              90
+            ],
+            [
+              3.6,
+              7.5,
+              180
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "case": "section_empty_nodes",
+      "expected": false,
+      "actual": "CRASH",
+      "error": "IndexError: list index out of range",
+      "matches": false,
+      "input": {
+        "name": "Form 04, ръб E3",
+        "thickness": 7.15,
+        "stack": [
+          [
+            "вдлъбване",
+            0.1
+          ],
+          [
+            "стъкло",
+            0.7
+          ],
+          [
+            "екран",
+            0.7
+          ],
+          [
+            "плоча",
+            0.4
+          ],
+          [
+            "батерия",
+            3.65
+          ],
+          [
+            "резерв",
+            0.3
+          ],
+          [
+            "намотка",
+            0.5
+          ],
+          [
+            "стъкло гръб",
+            0.7
+          ],
+          [
+            "вдлъбване",
+            0.1
+          ]
+        ],
+        "bezel": {
+          "lip": 0.9,
+          "gap": 0.15,
+          "seat": 0.5,
+          "clear": 0.1,
+          "border": 0.8,
+          "declared": 2.45
+        },
+        "wall": 1.5,
+        "edge": {
+          "nodes": []
+        }
+      }
+    },
+    {
+      "case": "section_radius_exceeds_thickness",
+      "expected": false,
+      "actual": false,
+      "matches": true,
+      "input": {
+        "name": "Form 04, ръб E3",
+        "thickness": 7.15,
+        "stack": [
+          [
+            "вдлъбване",
+            0.1
+          ],
+          [
+            "стъкло",
+            0.7
+          ],
+          [
+            "екран",
+            0.7
+          ],
+          [
+            "плоча",
+            0.4
+          ],
+          [
+            "батерия",
+            3.65
+          ],
+          [
+            "резерв",
+            0.3
+          ],
+          [
+            "намотка",
+            0.5
+          ],
+          [
+            "стъкло гръб",
+            0.7
+          ],
+          [
+            "вдлъбване",
+            0.1
+          ]
+        ],
+        "bezel": {
+          "lip": 0.9,
+          "gap": 0.15,
+          "seat": 0.5,
+          "clear": 0.1,
+          "border": 0.8,
+          "declared": 2.45
+        },
+        "wall": 1.5,
+        "edge": {
+          "arc_radius": 10
+        }
+      }
+    },
+    {
+      "case": "profile_control",
+      "expected": "CHECKS_PASS",
+      "actual": "CHECKS_PASS",
+      "matches": true,
+      "input": {
+        "name": "Synthetic regression cylinder",
+        "nodes": [
+          [
+            10,
+            0,
+            90
+          ],
+          [
+            10,
+            10,
+            90
+          ]
+        ],
+        "declared": {
+          "height_mm": 10,
+          "diameter_mm": 20
+        },
+        "wall": 1,
+        "keepouts": [
+          {
+            "name": "core",
+            "z0": 1,
+            "z1": 9,
+            "r": 8
+          }
+        ]
+      }
+    },
+    {
+      "case": "keepout_partly_outside",
+      "expected": "REJECTED",
+      "actual": "CHECKS_PASS",
+      "matches": false,
+      "input": {
+        "name": "Synthetic regression cylinder",
+        "nodes": [
+          [
+            10,
+            0,
+            90
+          ],
+          [
+            10,
+            10,
+            90
+          ]
+        ],
+        "declared": {
+          "height_mm": 10,
+          "diameter_mm": 20
+        },
+        "wall": 1,
+        "keepouts": [
+          {
+            "name": "core",
+            "z0": -1,
+            "z1": 9,
+            "r": 8
+          }
+        ]
+      }
+    },
+    {
+      "case": "keepout_fully_outside",
+      "expected": "REJECTED",
+      "actual": "CHECKS_PASS",
+      "matches": false,
+      "input": {
+        "name": "Synthetic regression cylinder",
+        "nodes": [
+          [
+            10,
+            0,
+            90
+          ],
+          [
+            10,
+            10,
+            90
+          ]
+        ],
+        "declared": {
+          "height_mm": 10,
+          "diameter_mm": 20
+        },
+        "wall": 1,
+        "keepouts": [
+          {
+            "name": "core",
+            "z0": -3,
+            "z1": -1,
+            "r": 8
+          }
+        ]
+      }
+    },
+    {
+      "case": "declared_dimension_mismatch",
+      "expected": "REJECTED",
+      "actual": "CHECKS_PASS",
+      "matches": false,
+      "input": {
+        "name": "Synthetic regression cylinder",
+        "nodes": [
+          [
+            10,
+            0,
+            90
+          ],
+          [
+            10,
+            10,
+            90
+          ]
+        ],
+        "declared": {
+          "height_mm": 12,
+          "diameter_mm": 20
+        },
+        "wall": 1,
+        "keepouts": [
+          {
+            "name": "core",
+            "z0": 1,
+            "z1": 9,
+            "r": 8
+          }
+        ]
+      }
+    },
+    {
+      "case": "rounding_does_not_hide_mismatch",
+      "expected": "REJECTED",
+      "actual": "CHECKS_PASS",
+      "matches": false,
+      "input": {
+        "name": "Synthetic regression cylinder",
+        "nodes": [
+          [
+            10,
+            0,
+            90
+          ],
+          [
+            10,
+            10.54,
+            90
+          ]
+        ],
+        "declared": {
+          "height_mm": 10,
+          "diameter_mm": 20
+        },
+        "wall": 1,
+        "keepouts": [
+          {
+            "name": "core",
+            "z0": 1,
+            "z1": 9,
+            "r": 8
+          }
+        ]
+      }
+    },
+    {
+      "case": "required_declared_missing",
+      "expected": "REJECTED",
+      "actual": "CHECKS_PASS",
+      "matches": false,
+      "input": {
+        "name": "Synthetic regression cylinder",
+        "nodes": [
+          [
+            10,
+            0,
+            90
+          ],
+          [
+            10,
+            10,
+            90
+          ]
+        ],
+        "wall": 1,
+        "keepouts": [
+          {
+            "name": "core",
+            "z0": 1,
+            "z1": 9,
+            "r": 8
+          }
+        ]
+      }
+    },
+    {
+      "case": "negative_radial_wall",
+      "expected": "REJECTED",
+      "actual": "CHECKS_PASS",
+      "matches": false,
+      "input": {
+        "name": "Synthetic regression cylinder",
+        "nodes": [
+          [
+            10,
+            0,
+            90
+          ],
+          [
+            10,
+            10,
+            90
+          ]
+        ],
+        "declared": {
+          "height_mm": 10,
+          "diameter_mm": 20
+        },
+        "wall": -3,
+        "keepouts": [
+          {
+            "name": "core",
+            "z0": 1,
+            "z1": 9,
+            "r": 8
+          }
+        ]
+      }
+    },
+    {
+      "case": "ambiguous_nodes_and_points",
+      "expected": "REJECTED",
+      "actual": "CHECKS_PASS",
+      "matches": false,
+      "input": {
+        "name": "Synthetic regression cylinder",
+        "nodes": [
+          [
+            10,
+            0,
+            90
+          ],
+          [
+            10,
+            10,
+            90
+          ]
+        ],
+        "declared": {
+          "height_mm": 10,
+          "diameter_mm": 20
+        },
+        "wall": 1,
+        "keepouts": [
+          {
+            "name": "core",
+            "z0": 1,
+            "z1": 9,
+            "r": 8
+          }
+        ],
+        "points": [
+          [
+            10,
+            0
+          ],
+          [
+            10,
+            10
+          ]
+        ]
+      }
+    },
+    {
+      "case": "nonfinite_profile_coordinate",
+      "expected": "REJECTED",
+      "actual": "CRASH",
+      "matches": false,
+      "input": {
+        "name": "Synthetic regression cylinder",
+        "nodes": [
+          [
+            "nan",
+            0,
+            90
+          ],
+          [
+            10,
+            10,
+            90
+          ]
+        ],
+        "declared": {
+          "height_mm": 10,
+          "diameter_mm": 20
+        },
+        "wall": 1,
+        "keepouts": [
+          {
+            "name": "core",
+            "z0": 1,
+            "z1": 9,
+            "r": 8
+          }
+        ]
+      }
+    },
+    {
+      "case": "narrow_intrusion_between_old_stations",
+      "expected": false,
+      "actual": true,
+      "matches": false,
+      "input": {
+        "points": [
+          [
+            10.0,
+            0.0
+          ],
+          [
+            10.0,
+            0.04977777777777778
+          ],
+          [
+            10.0,
+            0.09955555555555556
+          ],
+          [
+            10.0,
+            0.14933333333333335
+          ],
+          [
+            10.0,
+            0.19911111111111113
+          ],
+          [
+            10.0,
+            0.2488888888888889
+          ],
+          [
+            10.0,
+            0.2986666666666667
+          ],
+          [
+            10.0,
+            0.3484444444444445
+          ],
+          [
+            10.0,
+            0.39822222222222226
+          ],
+          [
+            10.0,
+            0.44800000000000006
+          ],
+          [
+            10.0,
+            0.4977777777777778
+          ],
+          [
+            10.0,
+            0.5475555555555556
+          ],
+          [
+            10.0,
+            0.5973333333333334
+          ],
+          [
+            10.0,
+            0.6471111111111112
+          ],
+          [
+            10.0,
+            0.696888888888889
+          ],
+          [
+            10.0,
+            0.7466666666666667
+          ],
+          [
+            10.0,
+            0.7964444444444445
+          ],
+          [
+            10.0,
+            0.8462222222222223
+          ],
+          [
+            10.0,
+            0.8960000000000001
+          ],
+          [
+            10.0,
+            0.9457777777777778
+          ],
+          [
+            10.0,
+            0.9955555555555556
+          ],
+          [
+            10.0,
+            1.0453333333333334
+          ],
+          [
+            10.0,
+            1.0951111111111111
+          ],
+          [
+            10.0,
+            1.144888888888889
+          ],
+          [
+            10.0,
+            1.1946666666666668
+          ],
+          [
+            10.0,
+            1.2444444444444447
+          ],
+          [
+            10.0,
+            1.2942222222222224
+          ],
+          [
+            10.0,
+            1.344
+          ],
+          [
+            10.0,
+            1.393777777777778
+          ],
+          [
+            10.0,
+            1.4435555555555557
+          ],
+          [
+            10.0,
+            1.4933333333333334
+          ],
+          [
+            10.0,
+            1.5431111111111113
+          ],
+          [
+            10.0,
+            1.592888888888889
+          ],
+          [
+            10.0,
+            1.6426666666666667
+          ],
+          [
+            10.0,
+            1.6924444444444446
+          ],
+          [
+            10.0,
+            1.7422222222222223
+          ],
+          [
+            10.0,
+            1.7920000000000003
+          ],
+          [
+            10.0,
+            1.841777777777778
+          ],
+          [
+            10.0,
+            1.8915555555555557
+          ],
+          [
+            10.0,
+            1.9413333333333336
+          ],
+          [
+            10.0,
+            1.9911111111111113
+          ],
+          [
+            10.0,
+            2.040888888888889
+          ],
+          [
+            10.0,
+            2.090666666666667
+          ],
+          [
+            10.0,
+            2.140444444444445
+          ],
+          [
+            10.0,
+            2.1902222222222223
+          ],
+          [
+            10.0,
+            2.24
+          ],
+          [
+            9.950617283950617,
+            2.2401234567901236
+          ],
+          [
+            9.901234567901234,
+            2.240246913580247
+          ],
+          [
+            9.851851851851851,
+            2.240370370370371
+          ],
+          [
+            9.802469135802468,
+            2.240493827160494
+          ],
+          [
+            9.753086419753087,
+            2.2406172839506175
+          ],
+          [
+            9.703703703703704,
+            2.240740740740741
+          ],
+          [
+            9.654320987654321,
+            2.2408641975308643
+          ],
+          [
+            9.604938271604938,
+            2.2409876543209877
+          ],
+          [
+            9.555555555555555,
+            2.2411111111111115
+          ],
+          [
+            9.506172839506172,
+            2.241234567901235
+          ],
+          [
+            9.45679012345679,
+            2.2413580246913583
+          ],
+          [
+            9.407407407407408,
+            2.2414814814814816
+          ],
+          [
+            9.358024691358025,
+            2.241604938271605
+          ],
+          [
+            9.308641975308642,
+            2.2417283950617284
+          ],
+          [
+            9.25925925925926,
+            2.241851851851852
+          ],
+          [
+            9.209876543209877,
+            2.2419753086419756
+          ],
+          [
+            9.160493827160494,
+            2.242098765432099
+          ],
+          [
+            9.11111111111111,
+            2.2422222222222223
+          ],
+          [
+            9.061728395061728,
+            2.2423456790123457
+          ],
+          [
+            9.012345679012345,
+            2.242469135802469
+          ],
+          [
+            8.962962962962964,
+            2.242592592592593
+          ],
+          [
+            8.91358024691358,
+            2.2427160493827163
+          ],
+          [
+            8.864197530864198,
+            2.2428395061728397
+          ],
+          [
+            8.814814814814815,
+            2.242962962962963
+          ],
+          [
+            8.765432098765432,
+            2.2430864197530864
+          ],
+          [
+            8.716049382716049,
+            2.24320987654321
+          ],
+          [
+            8.666666666666666,
+            2.2433333333333336
+          ],
+          [
+            8.617283950617285,
+            2.243456790123457
+          ],
+          [
+            8.567901234567902,
+            2.2435802469135804
+          ],
+          [
+            8.518518518518519,
+            2.2437037037037038
+          ],
+          [
+            8.469135802469136,
+            2.243827160493827
+          ],
+          [
+            8.419753086419753,
+            2.243950617283951
+          ],
+          [
+            8.37037037037037,
+            2.2440740740740743
+          ],
+          [
+            8.320987654320987,
+            2.2441975308641977
+          ],
+          [
+            8.271604938271604,
+            2.244320987654321
+          ],
+          [
+            8.222222222222221,
+            2.2444444444444445
+          ],
+          [
+            8.17283950617284,
+            2.244567901234568
+          ],
+          [
+            8.123456790123457,
+            2.2446913580246917
+          ],
+          [
+            8.074074074074074,
+            2.244814814814815
+          ],
+          [
+            8.024691358024691,
+            2.2449382716049384
+          ],
+          [
+            7.9753086419753085,
+            2.245061728395062
+          ],
+          [
+            7.925925925925926,
+            2.245185185185185
+          ],
+          [
+            7.876543209876543,
+            2.2453086419753086
+          ],
+          [
+            7.827160493827161,
+            2.2454320987654324
+          ],
+          [
+            7.777777777777778,
+            2.2455555555555557
+          ],
+          [
+            7.728395061728396,
+            2.245679012345679
+          ],
+          [
+            7.679012345679013,
+            2.2458024691358025
+          ],
+          [
+            7.62962962962963,
+            2.245925925925926
+          ],
+          [
+            7.580246913580247,
+            2.2460493827160493
+          ],
+          [
+            7.530864197530864,
+            2.246172839506173
+          ],
+          [
+            7.481481481481481,
+            2.2462962962962965
+          ],
+          [
+            7.432098765432099,
+            2.24641975308642
+          ],
+          [
+            7.382716049382716,
+            2.246543209876543
+          ],
+          [
+            7.333333333333334,
+            2.2466666666666666
+          ],
+          [
+            7.283950617283951,
+            2.2467901234567904
+          ],
+          [
+            7.234567901234568,
+            2.246913580246914
+          ],
+          [
+            7.185185185185185,
+            2.247037037037037
+          ],
+          [
+            7.135802469135802,
+            2.2471604938271605
+          ],
+          [
+            7.086419753086419,
+            2.247283950617284
+          ],
+          [
+            7.037037037037037,
+            2.2474074074074073
+          ],
+          [
+            6.987654320987654,
+            2.247530864197531
+          ],
+          [
+            6.938271604938272,
+            2.2476543209876545
+          ],
+          [
+            6.888888888888889,
+            2.247777777777778
+          ],
+          [
+            6.839506172839506,
+            2.2479012345679013
+          ],
+          [
+            6.790123456790123,
+            2.2480246913580246
+          ],
+          [
+            6.7407407407407405,
+            2.248148148148148
+          ],
+          [
+            6.6913580246913575,
+            2.248271604938272
+          ],
+          [
+            6.6419753086419755,
+            2.248395061728395
+          ],
+          [
+            6.592592592592593,
+            2.2485185185185186
+          ],
+          [
+            6.5432098765432105,
+            2.248641975308642
+          ],
+          [
+            6.493827160493828,
+            2.2487654320987653
+          ],
+          [
+            6.444444444444445,
+            2.2488888888888887
+          ],
+          [
+            6.395061728395062,
+            2.2490123456790125
+          ],
+          [
+            6.345679012345679,
+            2.249135802469136
+          ],
+          [
+            6.296296296296296,
+            2.2492592592592593
+          ],
+          [
+            6.246913580246914,
+            2.2493827160493827
+          ],
+          [
+            6.197530864197531,
+            2.249506172839506
+          ],
+          [
+            6.148148148148149,
+            2.2496296296296294
+          ],
+          [
+            6.098765432098766,
+            2.2497530864197532
+          ],
+          [
+            6.049382716049383,
+            2.2498765432098766
+          ],
+          [
+            6.0,
+            2.25
+          ],
+          [
+            6.049382716049383,
+            2.2501234567901234
+          ],
+          [
+            6.098765432098766,
+            2.2502469135802468
+          ],
+          [
+            6.148148148148148,
+            2.2503703703703706
+          ],
+          [
+            6.197530864197531,
+            2.250493827160494
+          ],
+          [
+            6.246913580246914,
+            2.2506172839506173
+          ],
+          [
+            6.296296296296296,
+            2.2507407407407407
+          ],
+          [
+            6.345679012345679,
+            2.250864197530864
+          ],
+          [
+            6.395061728395062,
+            2.2509876543209875
+          ],
+          [
+            6.444444444444445,
+            2.2511111111111113
+          ],
+          [
+            6.493827160493828,
+            2.2512345679012347
+          ],
+          [
+            6.54320987654321,
+            2.251358024691358
+          ],
+          [
+            6.592592592592593,
+            2.2514814814814814
+          ],
+          [
+            6.6419753086419755,
+            2.251604938271605
+          ],
+          [
+            6.6913580246913575,
+            2.251728395061728
+          ],
+          [
+            6.7407407407407405,
+            2.251851851851852
+          ],
+          [
+            6.790123456790123,
+            2.2519753086419754
+          ],
+          [
+            6.839506172839506,
+            2.2520987654320987
+          ],
+          [
+            6.888888888888889,
+            2.252222222222222
+          ],
+          [
+            6.938271604938271,
+            2.2523456790123455
+          ],
+          [
+            6.987654320987654,
+            2.252469135802469
+          ],
+          [
+            7.037037037037037,
+            2.2525925925925927
+          ],
+          [
+            7.086419753086419,
+            2.252716049382716
+          ],
+          [
+            7.135802469135802,
+            2.2528395061728395
+          ],
+          [
+            7.185185185185185,
+            2.252962962962963
+          ],
+          [
+            7.234567901234568,
+            2.253086419753086
+          ],
+          [
+            7.283950617283951,
+            2.2532098765432096
+          ],
+          [
+            7.333333333333333,
+            2.2533333333333334
+          ],
+          [
+            7.382716049382716,
+            2.253456790123457
+          ],
+          [
+            7.432098765432099,
+            2.25358024691358
+          ],
+          [
+            7.481481481481481,
+            2.2537037037037035
+          ],
+          [
+            7.530864197530864,
+            2.253827160493827
+          ],
+          [
+            7.580246913580247,
+            2.2539506172839507
+          ],
+          [
+            7.62962962962963,
+            2.254074074074074
+          ],
+          [
+            7.679012345679013,
+            2.2541975308641975
+          ],
+          [
+            7.728395061728395,
+            2.254320987654321
+          ],
+          [
+            7.777777777777778,
+            2.2544444444444443
+          ],
+          [
+            7.827160493827161,
+            2.2545679012345676
+          ],
+          [
+            7.876543209876543,
+            2.2546913580246914
+          ],
+          [
+            7.925925925925926,
+            2.254814814814815
+          ],
+          [
+            7.9753086419753085,
+            2.254938271604938
+          ],
+          [
+            8.024691358024691,
+            2.2550617283950616
+          ],
+          [
+            8.074074074074074,
+            2.255185185185185
+          ],
+          [
+            8.123456790123457,
+            2.2553086419753083
+          ],
+          [
+            8.172839506172838,
+            2.255432098765432
+          ],
+          [
+            8.222222222222221,
+            2.2555555555555555
+          ],
+          [
+            8.271604938271604,
+            2.255679012345679
+          ],
+          [
+            8.320987654320987,
+            2.2558024691358023
+          ],
+          [
+            8.37037037037037,
+            2.2559259259259257
+          ],
+          [
+            8.419753086419753,
+            2.256049382716049
+          ],
+          [
+            8.469135802469136,
+            2.256172839506173
+          ],
+          [
+            8.518518518518519,
+            2.2562962962962962
+          ],
+          [
+            8.567901234567902,
+            2.2564197530864196
+          ],
+          [
+            8.617283950617285,
+            2.256543209876543
+          ],
+          [
+            8.666666666666666,
+            2.2566666666666664
+          ],
+          [
+            8.716049382716049,
+            2.25679012345679
+          ],
+          [
+            8.765432098765432,
+            2.2569135802469136
+          ],
+          [
+            8.814814814814815,
+            2.257037037037037
+          ],
+          [
+            8.864197530864198,
+            2.2571604938271603
+          ],
+          [
+            8.91358024691358,
+            2.2572839506172837
+          ],
+          [
+            8.962962962962962,
+            2.257407407407407
+          ],
+          [
+            9.012345679012345,
+            2.257530864197531
+          ],
+          [
+            9.061728395061728,
+            2.2576543209876543
+          ],
+          [
+            9.11111111111111,
+            2.2577777777777777
+          ],
+          [
+            9.160493827160494,
+            2.257901234567901
+          ],
+          [
+            9.209876543209877,
+            2.2580246913580244
+          ],
+          [
+            9.25925925925926,
+            2.258148148148148
+          ],
+          [
+            9.308641975308642,
+            2.2582716049382716
+          ],
+          [
+            9.358024691358025,
+            2.258395061728395
+          ],
+          [
+            9.407407407407408,
+            2.2585185185185184
+          ],
+          [
+            9.45679012345679,
+            2.2586419753086417
+          ],
+          [
+            9.506172839506172,
+            2.258765432098765
+          ],
+          [
+            9.555555555555555,
+            2.2588888888888885
+          ],
+          [
+            9.604938271604938,
+            2.2590123456790123
+          ],
+          [
+            9.654320987654321,
+            2.2591358024691357
+          ],
+          [
+            9.703703703703704,
+            2.259259259259259
+          ],
+          [
+            9.753086419753085,
+            2.2593827160493825
+          ],
+          [
+            9.802469135802468,
+            2.259506172839506
+          ],
+          [
+            9.851851851851851,
+            2.259629629629629
+          ],
+          [
+            9.901234567901234,
+            2.259753086419753
+          ],
+          [
+            9.950617283950617,
+            2.2598765432098764
+          ],
+          [
+            10.0,
+            2.26
+          ],
+          [
+            10.0,
+            2.3099354838709676
+          ],
+          [
+            10.0,
+            2.3598709677419354
+          ],
+          [
+            10.0,
+            2.409806451612903
+          ],
+          [
+            10.0,
+            2.459741935483871
+          ],
+          [
+            10.0,
+            2.5096774193548383
+          ],
+          [
+            10.0,
+            2.559612903225806
+          ],
+          [
+            10.0,
+            2.609548387096774
+          ],
+          [
+            10.0,
+            2.6594838709677417
+          ],
+          [
+            10.0,
+            2.7094193548387095
+          ],
+          [
+            10.0,
+            2.7593548387096773
+          ],
+          [
+            10.0,
+            2.8092903225806447
+          ],
+          [
+            10.0,
+            2.8592258064516125
+          ],
+          [
+            10.0,
+            2.9091612903225803
+          ],
+          [
+            10.0,
+            2.959096774193548
+          ],
+          [
+            10.0,
+            3.009032258064516
+          ],
+          [
+            10.0,
+            3.0589677419354837
+          ],
+          [
+            10.0,
+            3.1089032258064515
+          ],
+          [
+            10.0,
+            3.1588387096774193
+          ],
+          [
+            10.0,
+            3.208774193548387
+          ],
+          [
+            10.0,
+            3.258709677419355
+          ],
+          [
+            10.0,
+            3.3086451612903223
+          ],
+          [
+            10.0,
+            3.35858064516129
+          ],
+          [
+            10.0,
+            3.408516129032258
+          ],
+          [
+            10.0,
+            3.4584516129032252
+          ],
+          [
+            10.0,
+            3.508387096774193
+          ],
+          [
+            10.0,
+            3.558322580645161
+          ],
+          [
+            10.0,
+            3.6082580645161286
+          ],
+          [
+            10.0,
+            3.6581935483870964
+          ],
+          [
+            10.0,
+            3.7081290322580642
+          ],
+          [
+            10.0,
+            3.758064516129032
+          ],
+          [
+            10.0,
+            3.808
+          ],
+          [
+            10.0,
+            3.8579354838709676
+          ],
+          [
+            10.0,
+            3.9078709677419354
+          ],
+          [
+            10.0,
+            3.9578064516129032
+          ],
+          [
+            10.0,
+            4.007741935483871
+          ],
+          [
+            10.0,
+            4.057677419354839
+          ],
+          [
+            10.0,
+            4.107612903225807
+          ],
+          [
+            10.0,
+            4.157548387096774
+          ],
+          [
+            10.0,
+            4.207483870967742
+          ],
+          [
+            10.0,
+            4.25741935483871
+          ],
+          [
+            10.0,
+            4.307354838709678
+          ],
+          [
+            10.0,
+            4.357290322580645
+          ],
+          [
+            10.0,
+            4.4072258064516125
+          ],
+          [
+            10.0,
+            4.45716129032258
+          ],
+          [
+            10.0,
+            4.507096774193548
+          ],
+          [
+            10.0,
+            4.557032258064516
+          ],
+          [
+            10.0,
+            4.606967741935484
+          ],
+          [
+            10.0,
+            4.656903225806451
+          ],
+          [
+            10.0,
+            4.7068387096774185
+          ],
+          [
+            10.0,
+            4.756774193548386
+          ],
+          [
+            10.0,
+            4.806709677419354
+          ],
+          [
+            10.0,
+            4.856645161290322
+          ],
+          [
+            10.0,
+            4.90658064516129
+          ],
+          [
+            10.0,
+            4.9565161290322575
+          ],
+          [
+            10.0,
+            5.006451612903225
+          ],
+          [
+            10.0,
+            5.056387096774193
+          ],
+          [
+            10.0,
+            5.106322580645161
+          ],
+          [
+            10.0,
+            5.156258064516129
+          ],
+          [
+            10.0,
+            5.2061935483870965
+          ],
+          [
+            10.0,
+            5.256129032258064
+          ],
+          [
+            10.0,
+            5.306064516129032
+          ],
+          [
+            10.0,
+            5.356
+          ],
+          [
+            10.0,
+            5.405935483870968
+          ],
+          [
+            10.0,
+            5.4558709677419355
+          ],
+          [
+            10.0,
+            5.505806451612903
+          ],
+          [
+            10.0,
+            5.555741935483871
+          ],
+          [
+            10.0,
+            5.605677419354839
+          ],
+          [
+            10.0,
+            5.655612903225807
+          ],
+          [
+            10.0,
+            5.7055483870967745
+          ],
+          [
+            10.0,
+            5.755483870967742
+          ],
+          [
+            10.0,
+            5.805419354838709
+          ],
+          [
+            10.0,
+            5.855354838709677
+          ],
+          [
+            10.0,
+            5.905290322580645
+          ],
+          [
+            10.0,
+            5.955225806451613
+          ],
+          [
+            10.0,
+            6.00516129032258
+          ],
+          [
+            10.0,
+            6.055096774193548
+          ],
+          [
+            10.0,
+            6.105032258064516
+          ],
+          [
+            10.0,
+            6.154967741935484
+          ],
+          [
+            10.0,
+            6.204903225806452
+          ],
+          [
+            10.0,
+            6.254838709677419
+          ],
+          [
+            10.0,
+            6.304774193548387
+          ],
+          [
+            10.0,
+            6.354709677419355
+          ],
+          [
+            10.0,
+            6.404645161290323
+          ],
+          [
+            10.0,
+            6.45458064516129
+          ],
+          [
+            10.0,
+            6.5045161290322575
+          ],
+          [
+            10.0,
+            6.554451612903225
+          ],
+          [
+            10.0,
+            6.604387096774193
+          ],
+          [
+            10.0,
+            6.654322580645161
+          ],
+          [
+            10.0,
+            6.704258064516129
+          ],
+          [
+            10.0,
+            6.7541935483870965
+          ],
+          [
+            10.0,
+            6.804129032258064
+          ],
+          [
+            10.0,
+            6.854064516129032
+          ],
+          [
+            10.0,
+            6.904
+          ],
+          [
+            10.0,
+            6.953935483870968
+          ],
+          [
+            10.0,
+            7.0038709677419355
+          ],
+          [
+            10.0,
+            7.053806451612902
+          ],
+          [
+            10.0,
+            7.10374193548387
+          ],
+          [
+            10.0,
+            7.153677419354838
+          ],
+          [
+            10.0,
+            7.203612903225806
+          ],
+          [
+            10.0,
+            7.253548387096774
+          ],
+          [
+            10.0,
+            7.303483870967741
+          ],
+          [
+            10.0,
+            7.353419354838709
+          ],
+          [
+            10.0,
+            7.403354838709677
+          ],
+          [
+            10.0,
+            7.453290322580645
+          ],
+          [
+            10.0,
+            7.503225806451613
+          ],
+          [
+            10.0,
+            7.55316129032258
+          ],
+          [
+            10.0,
+            7.603096774193548
+          ],
+          [
+            10.0,
+            7.653032258064516
+          ],
+          [
+            10.0,
+            7.702967741935484
+          ],
+          [
+            10.0,
+            7.752903225806452
+          ],
+          [
+            10.0,
+            7.802838709677419
+          ],
+          [
+            10.0,
+            7.852774193548387
+          ],
+          [
+            10.0,
+            7.902709677419355
+          ],
+          [
+            10.0,
+            7.952645161290323
+          ],
+          [
+            10.0,
+            8.002580645161292
+          ],
+          [
+            10.0,
+            8.05251612903226
+          ],
+          [
+            10.0,
+            8.102451612903227
+          ],
+          [
+            10.0,
+            8.152387096774195
+          ],
+          [
+            10.0,
+            8.202322580645163
+          ],
+          [
+            10.0,
+            8.25225806451613
+          ],
+          [
+            10.0,
+            8.302193548387098
+          ],
+          [
+            10.0,
+            8.352129032258064
+          ],
+          [
+            10.0,
+            8.402064516129032
+          ],
+          [
+            10.0,
+            8.452
+          ],
+          [
+            10.0,
+            8.501935483870968
+          ],
+          [
+            10.0,
+            8.551870967741936
+          ],
+          [
+            10.0,
+            8.601806451612903
+          ],
+          [
+            10.0,
+            8.651741935483871
+          ],
+          [
+            10.0,
+            8.701677419354839
+          ],
+          [
+            10.0,
+            8.751612903225807
+          ],
+          [
+            10.0,
+            8.801548387096775
+          ],
+          [
+            10.0,
+            8.851483870967742
+          ],
+          [
+            10.0,
+            8.90141935483871
+          ],
+          [
+            10.0,
+            8.951354838709678
+          ],
+          [
+            10.0,
+            9.001290322580646
+          ],
+          [
+            10.0,
+            9.051225806451614
+          ],
+          [
+            10.0,
+            9.101161290322581
+          ],
+          [
+            10.0,
+            9.15109677419355
+          ],
+          [
+            10.0,
+            9.201032258064517
+          ],
+          [
+            10.0,
+            9.250967741935485
+          ],
+          [
+            10.0,
+            9.30090322580645
+          ],
+          [
+            10.0,
+            9.350838709677419
+          ],
+          [
+            10.0,
+            9.400774193548386
+          ],
+          [
+            10.0,
+            9.450709677419354
+          ],
+          [
+            10.0,
+            9.500645161290322
+          ],
+          [
+            10.0,
+            9.55058064516129
+          ],
+          [
+            10.0,
+            9.600516129032258
+          ],
+          [
+            10.0,
+            9.650451612903225
+          ],
+          [
+            10.0,
+            9.700387096774193
+          ],
+          [
+            10.0,
+            9.750322580645161
+          ],
+          [
+            10.0,
+            9.800258064516129
+          ],
+          [
+            10.0,
+            9.850193548387097
+          ],
+          [
+            10.0,
+            9.900129032258064
+          ],
+          [
+            10.0,
+            9.950064516129032
+          ],
+          [
+            10,
+            10
+          ]
+        ],
+        "keepouts": [
+          {
+            "name": "core",
+            "z0": 1,
+            "z1": 9,
+            "r": 8
+          }
+        ],
+        "wall": 1
+      }
+    },
+    {
+      "case": "origin_translation_does_not_move_relative_widest",
+      "expected": 50.0,
+      "actual": 550.0,
+      "matches": false,
+      "input": {
+        "nodes": [
+          [
+            10,
+            50,
+            90
+          ],
+          [
+            10,
+            60,
+            90
+          ]
+        ]
+      }
+    },
+    {
+      "case": "section_failed_cli_exit",
+      "expected": 2,
+      "actual": 0,
+      "matches": false,
+      "input": {
+        "example": "form03-edge.json"
+      }
+    },
+    {
+      "case": "profile_missing_declared_not_continuity_pass",
+      "expected": "REJECTED",
+      "actual": "CHECKS_PASS",
+      "matches": false,
+      "input": {
+        "version": "v3.3-candidate",
+        "subject": "original automotive concept",
+        "dimensions": {
+          "length_mm": 4750,
+          "width_mm": 2020,
+          "height_mm": 1150
+        },
+        "axes": {
+          "x": "length rear to front",
+          "y": "width left to right",
+          "z": "height above ground"
+        },
+        "dimension_provenance": "Assumed from previous text, not measured",
+        "events": [
+          {
+            "id": "V01",
+            "type": "visual",
+            "before": true,
+            "after": true,
+            "description": "Main shoulder"
+          },
+          {
+            "id": "V02",
+            "type": "visual",
+            "before": true,
+            "after": false,
+            "description": "Secondary side crease"
+          }
+        ],
+        "claims": {},
+        "views": {
+          "profile": "PASS",
+          "front": "PASS",
+          "rear": "PASS",
+          "three_quarter": "PASS",
+          "detail": "PASS"
+        },
+        "continuity": {
+          "claim": "G2",
+          "status": "PASS",
+          "evidence": "",
+          "check": {
+            "tool": "profile_check",
+            "spec": "undeclared.json"
+          }
+        },
+        "validation": "Only manifest syntax and accounting can be checked. No source CAD.",
+        "constraints": [
+          "synthetic test"
+        ],
+        "joints": [
+          {
+            "name": "j",
+            "nominal_mm": 0.15,
+            "tolerance_mm": 0.03
+          }
+        ],
+        "view_sources": {
+          "profile": "form04.svg",
+          "front": "form04.svg",
+          "rear": "form04.svg",
+          "three_quarter": "form04.svg",
+          "detail": "form04.svg"
+        }
+      }
+    }
+  ],
+  "validation": "development regression; not independent design validation"
+}

@@ -1,0 +1,3 @@
+# FORM SKILLS installation
+
+Read LATEST in this repository to select the current published version, or use the explicit version requested by the user. Read the complete SKILL.md and reference-v3.1.md in versions/<version>/, and retrieve profile_check.py from the same directory. Do not substitute summaries for the files. Inspect the script before running it; use an isolated environment with Python 3, numpy and matplotlib if available. Report version, missing files and tool limitations. Apply the methodology in the current conversation; do not claim persistent installation. Wait for the design brief. Never modify repository files without user authorization.

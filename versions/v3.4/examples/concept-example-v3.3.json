@@ -1,0 +1,45 @@
+{
+  "version": "v3.3-candidate",
+  "subject": "original automotive concept",
+  "dimensions": {
+    "length_mm": 4750,
+    "width_mm": 2020,
+    "height_mm": 1150
+  },
+  "axes": {
+    "x": "length rear to front",
+    "y": "width left to right",
+    "z": "height above ground"
+  },
+  "dimension_provenance": "Assumed from previous text, not measured",
+  "events": [
+    {
+      "id": "V01",
+      "type": "visual",
+      "before": true,
+      "after": true,
+      "description": "Main shoulder"
+    },
+    {
+      "id": "V02",
+      "type": "visual",
+      "before": true,
+      "after": false,
+      "description": "Secondary side crease"
+    }
+  ],
+  "claims": {},
+  "views": {
+    "profile": "UNKNOWN",
+    "front": "UNKNOWN",
+    "rear": "UNKNOWN",
+    "three_quarter": "UNKNOWN",
+    "detail": "UNKNOWN"
+  },
+  "continuity": {
+    "claim": "G2",
+    "status": "UNKNOWN",
+    "evidence": ""
+  },
+  "validation": "Only manifest syntax and accounting can be checked. No source CAD."
+}

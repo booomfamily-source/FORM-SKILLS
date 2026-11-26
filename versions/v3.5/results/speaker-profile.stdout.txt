@@ -1,0 +1,67 @@
+{
+ "height_mm": 140.0,
+ "diameter_mm": 160.0,
+ "H_over_D": 0.875,
+ "widest_at_pct_from_top": 61.4,
+ "straight_wall_pct": 12.8,
+ "inflections": 0,
+ "inflections_at_z_mm": [],
+ "kinks": [],
+ "necks": [],
+ "min_radius_of_curvature_mm": 16.8,
+ "top_tangent_deg": 0.0,
+ "bottom_tangent_deg": 140.0,
+ "top_corner_deg": 0.0,
+ "bottom_corner_deg": 40.0,
+ "top_d_mm": 92.0,
+ "base_d_mm": 120.0,
+ "fits": [
+  {
+   "name": "управление",
+   "clearance_mm": 3.0,
+   "z_covered": true,
+   "ok": true
+  },
+  {
+   "name": "ход на говорителя",
+   "clearance_mm": 10.094252692445842,
+   "z_covered": true,
+   "ok": true
+  },
+  {
+   "name": "нискочестотен, фланец Ø120",
+   "clearance_mm": 10.100407684970207,
+   "z_covered": true,
+   "ok": true
+  },
+  {
+   "name": "пет високочестотни",
+   "clearance_mm": 11.146279821843478,
+   "z_covered": true,
+   "ok": true
+  },
+  {
+   "name": "електроника",
+   "clearance_mm": 12.219274675542877,
+   "z_covered": true,
+   "ok": true
+  },
+  {
+   "name": "дъно и опора",
+   "clearance_mm": 7.0,
+   "z_covered": true,
+   "ok": true
+  }
+ ],
+ "raw_dimensions": {
+  "height_mm": 140.0,
+  "diameter_mm": 160.0
+ },
+ "limits": "Семплиран профил; wall е радиален резерв; не проверява крайни стени, 3D сглобка или G2 на повърхнина."
+}
+Горе повърхността продължава плоскостта на върха без ръб.
+Долу тялото се прибира под себе си и сянката го отделя от плота.
+13% от височината е права стена.
+Не е открита инфлексия при използваното семплиране и праг; това не е доказателство за изпъкналост на 3D тялото.
+Най-широкото място е на 61% от височината; това не определя центъра на тежестта.
+Вътрешностите се побират; най-малък запас 3.0 mm.

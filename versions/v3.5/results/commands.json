@@ -1,0 +1,89 @@
+[
+  {
+    "name": "inherited-v34",
+    "command": [
+      "python3",
+      "regression_test.py"
+    ],
+    "expected_exit": 0,
+    "actual_exit": 0,
+    "matches": true
+  },
+  {
+    "name": "added-v34",
+    "command": [
+      "python3",
+      "regression_test.py",
+      "--checker-dir",
+      "../v3.4",
+      "--report",
+      "results/added-v34.json"
+    ],
+    "expected_exit": 1,
+    "actual_exit": 1,
+    "matches": true
+  },
+  {
+    "name": "all-v35",
+    "command": [
+      "python3",
+      "regression_test.py",
+      "--report",
+      "results/added-v35.json"
+    ],
+    "expected_exit": 0,
+    "actual_exit": 0,
+    "matches": true
+  },
+  {
+    "name": "form04-project",
+    "command": [
+      "python3",
+      "project_check.py",
+      "examples/form04-manifest.json"
+    ],
+    "expected_exit": 1,
+    "actual_exit": 1,
+    "matches": true
+  },
+  {
+    "name": "form04-section",
+    "command": [
+      "python3",
+      "section_check.py",
+      "examples/form04-edge.json",
+      "results/form04-section.png"
+    ],
+    "expected_exit": 0,
+    "actual_exit": 0,
+    "matches": true
+  },
+  {
+    "name": "plain-arc-negative-control",
+    "command": [
+      "python3",
+      "section_check.py",
+      "examples/arc-r3-edge.json"
+    ],
+    "expected_exit": 2,
+    "actual_exit": 2,
+    "matches": true
+  },
+  {
+    "name": "speaker-profile",
+    "command": [
+      "python3",
+      "profile_check.py",
+      "examples/speaker-fixed.json",
+      "results/speaker-profile.png"
+    ],
+    "expected_exit": 0,
+    "actual_exit": 0,
+    "matches": true
+  },
+  {
+    "name": "syntax-and-frontmatter-stdlib",
+    "actual": "PASS",
+    "scope": "AST of all version Python files; two-field frontmatter and required references; not the unavailable bundled PyYAML validator"
+  }
+]

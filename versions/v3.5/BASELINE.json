@@ -1,0 +1,29 @@
+{
+  "source_commit": "9e3374566bbcaf3cc2cdd54edd944c69b3fa7d1b",
+  "source_version": "v3.4 uploaded candidate; PR #2",
+  "source_tree_v34": "5e0a1e670e25e513f8dce12688b8e75e188b309a",
+  "alternative_v34_branch_not_used": "release/v3.4-verified-checker",
+  "preserved_git_blobs": {
+    "LATEST": "4d5034cea0b391c8ffe5111be4c4a8f0ed81771f",
+    "UPGRADE.md": "b2b8a4d2b26da2a2a06df5a432446ef26027af38",
+    "versions/v3.2/SKILL.md": "1a18b79f51213869c02a70d27c619356314c22b7",
+    "versions/v3.2/profile_check.py": "4d8e3466088b626cd62fc18905d9c14fbb5adf07",
+    "versions/v3.2/reference-v3.1.md": "f2b336b9ed53999f8d1f9a3bae062819236e67ce",
+    "versions/v3.4/CHANGELOG.md": "5277a3a5758143c967b8138a456ceb6cfcd68f6a",
+    "versions/v3.4/README.md": "9b6ca91ba99d127e8878a7f12dad9743ba4cbabb",
+    "versions/v3.4/SKILL.md": "91b2e82a233af747202ecb49454a12b79f0a1580",
+    "versions/v3.4/TEST_RESULTS.md": "0354b06625d40558399f0067454ec0d4daad114c",
+    "versions/v3.4/examples/arc-r3-edge.json": "47096f6e01324177db807d0c024a38e510cf9a09",
+    "versions/v3.4/examples/concept-example-v3.3.json": "710b089b9808f33387f5d30fb347941907df113e",
+    "versions/v3.4/examples/form03-edge.json": "a0e9942a63d55ae9b2993ad9b3e26414cfa94f4f",
+    "versions/v3.4/examples/form04-edge.json": "af1ea7be77766920fff82c3be4b7a836efe8c3af",
+    "versions/v3.4/examples/form04-manifest.json": "2ce7614764e2388b8549d90ff09565822279c50d",
+    "versions/v3.4/examples/form04.svg": "52fa25ef66255bb4743cfa00c44020c66524f8de",
+    "versions/v3.4/examples/speaker-fixed.json": "d3b538bae4c1e040bd790faf5c96b90508ff80ff",
+    "versions/v3.4/profile_check.py": "85792f4af772c409175f396530933086d06afa68",
+    "versions/v3.4/project_check.py": "670abc365cb9d635ef1c1db635398c952f372c3c",
+    "versions/v3.4/reference-v3.4.md": "2e69db4227c3ad0173c21deb478db2472d094292",
+    "versions/v3.4/regression_test.py": "7b1d5f26c5f58ea04f6e27a4302e7fef800e1b0a",
+    "versions/v3.4/section_check.py": "2ac51eeae84717b5c24ea501bca3d22a0ab2b695"
+  }
+}

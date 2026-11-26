@@ -1,0 +1,20 @@
+name: FORM SKILLS v3.4 regression
+on:
+  pull_request:
+    paths:
+      - 'versions/v3.4/**'
+      - '.github/workflows/form-skills-v34.yml'
+  workflow_dispatch:
+jobs:
+  regression:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Run uploaded v3.4 regression suite
+        working-directory: versions/v3.4
+        run: python3 regression_test.py

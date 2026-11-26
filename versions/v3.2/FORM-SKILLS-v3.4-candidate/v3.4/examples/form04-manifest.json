@@ -1,0 +1,197 @@
+{
+ "version": "v3.4-candidate",
+ "subject": "iPhone 20 / Form 04, независим концепт",
+ "dimensions": {
+  "length_mm": 150.17,
+  "width_mm": 71.95,
+  "height_mm": 12.2
+ },
+ "dimension_provenance": "Изведени: ширина и дължина от екрана и рамката 2,45 mm; височина от стека при камерата. Слоевете са допускания.",
+ "axes": {
+  "x": "length, от горния край към долния",
+  "y": "width, отляво надясно",
+  "z": "height, от лицето към гърба"
+ },
+ "constraints": [
+  "Екран 160 mm, 19,5:9",
+  "Батерия 17 Wh",
+  "Основен модул 14 x 14 x 9,5 mm",
+  "Два модула 10 x 10 x 6,5 mm и светкавица",
+  "Намотка Ø50 без метал над нея",
+  "USB-C, включване, два бутона за звук",
+  "Една ръка"
+ ],
+ "events": [
+  {
+   "id": "P01",
+   "type": "physical",
+   "before": true,
+   "after": true,
+   "description": "Предно стъкло"
+  },
+  {
+   "id": "P02",
+   "type": "physical",
+   "before": true,
+   "after": true,
+   "description": "Рамка"
+  },
+  {
+   "id": "P03",
+   "type": "physical",
+   "before": true,
+   "after": true,
+   "description": "Задно стъкло"
+  },
+  {
+   "id": "P04",
+   "type": "physical",
+   "before": true,
+   "after": true,
+   "description": "Прозорец основна камера"
+  },
+  {
+   "id": "P05",
+   "type": "physical",
+   "before": true,
+   "after": true,
+   "description": "Прозорец камера 2"
+  },
+  {
+   "id": "P06",
+   "type": "physical",
+   "before": true,
+   "after": true,
+   "description": "Прозорец камера 3"
+  },
+  {
+   "id": "P07",
+   "type": "physical",
+   "before": true,
+   "after": true,
+   "description": "Светкавица"
+  },
+  {
+   "id": "P08",
+   "type": "physical",
+   "before": true,
+   "after": true,
+   "description": "Бутон включване"
+  },
+  {
+   "id": "P09",
+   "type": "physical",
+   "before": true,
+   "after": true,
+   "description": "Звук нагоре"
+  },
+  {
+   "id": "P10",
+   "type": "physical",
+   "before": true,
+   "after": true,
+   "description": "Звук надолу"
+  },
+  {
+   "id": "P11",
+   "type": "physical",
+   "before": true,
+   "after": true,
+   "description": "USB-C"
+  },
+  {
+   "id": "P12",
+   "type": "physical",
+   "before": true,
+   "after": true,
+   "description": "Акустичен процеп ляв"
+  },
+  {
+   "id": "P13",
+   "type": "physical",
+   "before": true,
+   "after": true,
+   "description": "Акустичен процеп десен"
+  },
+  {
+   "id": "P14",
+   "type": "physical",
+   "before": true,
+   "after": true,
+   "description": "Слухов процеп"
+  },
+  {
+   "id": "P15",
+   "type": "physical",
+   "before": true,
+   "after": true,
+   "description": "Антенно прекъсване горе ляво"
+  },
+  {
+   "id": "P16",
+   "type": "physical",
+   "before": true,
+   "after": true,
+   "description": "Антенно прекъсване горе дясно"
+  },
+  {
+   "id": "P17",
+   "type": "physical",
+   "before": true,
+   "after": true,
+   "description": "Антенно прекъсване долу ляво"
+  },
+  {
+   "id": "P18",
+   "type": "physical",
+   "before": true,
+   "after": true,
+   "description": "Антенно прекъсване долу дясно"
+  }
+ ],
+ "claims": {},
+ "joints": [
+  {
+   "name": "предно стъкло - рамка",
+   "nominal_mm": 0.15,
+   "tolerance_mm": 0.03
+  },
+  {
+   "name": "задно стъкло - рамка",
+   "nominal_mm": 0.15,
+   "tolerance_mm": 0.03
+  },
+  {
+   "name": "бутони - рамка",
+   "nominal_mm": 0.15,
+   "tolerance_mm": 0.03
+  },
+  {
+   "name": "антенно прекъсване",
+   "nominal_mm": 1.0,
+   "tolerance_mm": 0.05
+  }
+ ],
+ "views": {
+  "profile": "PASS",
+  "front": "PASS",
+  "rear": "PASS",
+  "three_quarter": "UNKNOWN",
+  "detail": "PASS"
+ },
+ "view_sources": {
+  "profile": "form04.svg",
+  "front": "form04.svg",
+  "rear": "form04.svg",
+  "detail": "form04.svg"
+ },
+ "continuity": {
+  "claim": "кривината расте плавно при задния преход",
+  "status": "PASS",
+  "check": {
+   "tool": "section_check",
+   "spec": "form04-edge.json"
+  }
+ },
+ "validation": "Само преизчислена геометрия на един ръб. Няма тримерен модел и няма проверка с хора."
+}

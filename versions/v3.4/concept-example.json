@@ -1,0 +1,77 @@
+{
+  "version": "v3.4",
+  "subject": "automotive concept",
+  "units": "mm",
+  "dimensions": {
+    "length_mm": 4750,
+    "width_mm": 2020,
+    "height_mm": 1150
+  },
+  "axes": {
+    "x": "length rear to front",
+    "y": "width left to right",
+    "z": "height above ground"
+  },
+  "constraints": [
+    {
+      "id": "L",
+      "source": "assumption",
+      "value_mm": 4750
+    }
+  ],
+  "events": [
+    {
+      "id": "P01",
+      "type": "physical",
+      "before": true,
+      "after": true,
+      "view": "profile",
+      "geometry_ref": "body-a"
+    },
+    {
+      "id": "V01",
+      "type": "visual",
+      "before": true,
+      "after": true,
+      "view": "profile",
+      "geometry_ref": "surface-a"
+    },
+    {
+      "id": "V02",
+      "type": "visual",
+      "before": true,
+      "after": false,
+      "view": "profile",
+      "geometry_ref": "crease-b"
+    }
+  ],
+  "claims": {
+    "physical": {
+      "before": 1,
+      "after": 1,
+      "percent": 0
+    },
+    "visual": {
+      "before": 2,
+      "after": 1,
+      "percent": 50
+    }
+  },
+  "views": {
+    "profile": "UNKNOWN",
+    "front": "UNKNOWN",
+    "rear": "UNKNOWN",
+    "three_quarter": "UNKNOWN",
+    "detail": "UNKNOWN"
+  },
+  "artifacts": {},
+  "continuity": {
+    "status": "UNKNOWN"
+  },
+  "assembly": {
+    "nominal_gap_mm": 3.5,
+    "tolerance_mm": 0.5,
+    "step_mm": 0
+  },
+  "validation": "not verified"
+}
